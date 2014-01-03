@@ -18,19 +18,3 @@ La table de données de GLPI n'est pas alterée pour permettre le fonctionnement
 A l'installation du plugin, les mots de passe présent dans la base de données sont convertis.
 Lorsque l'utilisateur met à jour son mot de passe, la version "compatible" Apache l'est aussi.
 Lorsqu'un utilisateur est supprimé, la version "compatible" Apache l'est aussi.
-
-Exemple de paramètrage Apache :
-
-DBDriver mysql
-DBDParams "host=monip port=3306 dbname=dbglpi user=userglpi pass=passdbglpi"
-DBDExptime 300
-DBDMin 1
-DBDMax 10
-
-<Directory "/var/www/web">
-AuthType basic
-AuthName "Registered User"
-AuthBasicProvider dbd
-AuthDBDUserPWQuery "SELECT glpi_plugin_apacheauthdbd_users.password FROM glpi_plugin_apacheauthdbd_users INNER JOIN glpi_users ON (glpi_users.id = glpi_plugin_apacheauthdbd_users.users_id AND glpi_users.is_active=1) WHERE glpi_users.name=%s AND glpi_plugin_apacheauthdbd_users.auth=1" 
-Require valid-user
-</Directory>
