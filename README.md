@@ -14,14 +14,14 @@ Ce plugin effectue les opérations suivantes :
 3. Le mot de passe est prefixé avec la chaine {SHA} afin de permettre à Apache d'identifier l'encodage.
 
 
-La table de données de GLPI n'est pas alteré pour permettre le fonctionnement du logiciel, les mots de passe au format "Apache" sont stockées dans une table additionnelle.
+La table de données de GLPI n'est pas alterée pour permettre le fonctionnement du logiciel, les mots de passe au format "Apache" sont stockées dans une table additionnelle.
 A l'installation du plugin, les mots de passe présent dans la base de données sont convertis.
 Lorsque l'utilisateur met à jour son mot de passe, la version "compatible" Apache l'est aussi.
 Lorsqu'un utilisateur est supprimé, la version "compatible" Apache l'est aussi.
 
 Exemple de paramètrage Apache :
 
-BDriver mysql
+DBDriver mysql
 DBDParams "host=monip port=3306 dbname=dbglpi user=userglpi pass=passdbglpi"
 DBDExptime 300
 DBDMin 1
