@@ -18,3 +18,7 @@ La table de données de GLPI n'est pas alterée pour permettre le fonctionnement
 A l'installation du plugin, les mots de passe présent dans la base de données sont convertis.
 Lorsque l'utilisateur met à jour son mot de passe, la version "compatible" Apache l'est aussi.
 Lorsqu'un utilisateur est supprimé, la version "compatible" Apache l'est aussi.
+
+
+Emplacement du projet : https://forge.indepnet.net/projects/apacheauthdbd
+GitHub ne sert que de depot GIT pour le code source.
