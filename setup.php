@@ -29,6 +29,9 @@ function plugin_init_apacheauthdbd() {
 	$PLUGIN_HOOKS['item_add']['apacheauthdbd'] = $PLUGIN_HOOKS['item_restore']['apacheauthdbd'] = array('User' => 'plugin_item_add_apacheauthdbd_user');
 	$PLUGIN_HOOKS['item_update']['apacheauthdbd'] = array('User' => 'plugin_item_update_apacheauthdbd_user');
 	$PLUGIN_HOOKS['item_delete']['apacheauthdbd'] = $PLUGIN_HOOKS['item_purge']['apacheauthdbd'] = array('User' => 'plugin_item_delete_apacheauthdbd_user');
+    
+       	$PLUGIN_HOOKS['pre_item_add']['apacheauthdbd'] = array('NotImportedEmail ' => 'plugin_item_add_a'); // Voir fonction ci-dessous pour exemple
+    
     $PLUGIN_HOOKS['csrf_compliant']['apacheauthdbd'] = true;
     Plugin::registerClass('PluginApacheauthdbdUser', array('addtabon' => array('User')));
 
@@ -63,4 +66,13 @@ function plugin_item_delete_apacheauthdbd_user($parm) {
     return true ; 
 }
 
+function plugin_item_add_a($parm)
+{  
+
+	// if($parm['reason']) {
+ mail("blaise.barre@gmail.com","sujet","test") ;
+         
+	// }
+	return true;
+}
  ?>
