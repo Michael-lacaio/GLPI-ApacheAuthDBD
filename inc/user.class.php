@@ -34,7 +34,7 @@ class PluginApacheauthdbdUser extends CommonDBTM {
         echo "<tr class='tab_bg_1'>";	
         echo "<td class='center' colspan='2'>";
         echo "<input type='hidden' name='id' value=$id>";
-        echo "<input type='submit' value='Envoyer' class='submit' name='à jour' >";
+        echo "<input type='submit' value='Sauvegarder' class='submit' name='à jour' >";
         echo "</td></tr>";
 
         echo "</table>";
