@@ -14,7 +14,7 @@ class PluginApacheauthdbdUser extends CommonDBTM {
         global $DB;
         echo "<form action=\"$target\" method='post'>";
         echo "<table class='tab_cadre_fixe'>";
-        echo "<tr><th colspan='2' class='center b'Autoriser l'authentification via le module Apache : ";
+        echo "<tr><th colspan='2' class='center b'>Autoriser l'authentification via le module Apache : ";
         echo "</th></tr>";
         echo "<tr class='tab_bg_2'>";
         echo "<td>Authentification autorisée</td><td>";
