@@ -66,13 +66,5 @@ function plugin_item_delete_apacheauthdbd_user($parm) {
     return true ; 
 }
 
-function plugin_item_add_a($parm)
-{  
 
-	// if($parm['reason']) {
- mail("blaise.barre@gmail.com","sujet","test") ;
-         
-	// }
-	return true;
-}
  ?>
